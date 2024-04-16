@@ -23,7 +23,9 @@ router.get('/seed', async (req, res) => {
 })
 
 // NEW //
-
+router.get('/new', (req, res) => {
+    res.render('new.ejs')
+})
 
 // SHOW //
 router.get('/:id', async (req, res) => {
@@ -31,6 +33,23 @@ router.get('/:id', async (req, res) => {
     res.render('show.ejs', {
         patient: foundPatient
     })
+})
+
+// EDIT //
+
+
+/////////////////////////////////////////////////////////////////////////////
+
+// NEW (POST) //
+router.post('/', async (req, res) => {
+    req.body.insurance = req.body.insurance ? true : false
+    try {
+        const newPatient = await Patient.create(req.body)
+        res.redirect('/patients')
+    } catch (err) {
+        console.log(err)
+        res.status(500).send(err.message)
+    }
 })
 
 module.exports = router

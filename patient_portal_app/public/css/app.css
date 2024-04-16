@@ -31,3 +31,11 @@ a {
 .patient-details {
     text-align: left;
 }
+
+.patient-form {
+    text-align: left;
+}
+
+.indent {
+    text-indent: 40px;
+}

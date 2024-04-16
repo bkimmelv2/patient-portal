@@ -1,0 +1,18 @@
+<%-include('../partials/head.ejs')%>
+
+<h1>CREATE NEW PATIENT</h1>
+<form action="/patients" method="POST" class="patient-form">
+    Patient Name (first and last): <input type="text" name="name"><br>
+    Age: <input type="number" name="age"><br>
+    Gender (not required): <input type="text" name="gender"><br>
+    Insurance?: <input type="checkbox" name="insurance"><br><br>
+    Vitals: <br>
+        Temperature: <input type="number" name="vitals.temp"><br>
+        Heart rate: <input type="number" name="vitals.heartRate"><br>
+        Respiratory rate: <input type="number" name="vitals.respRate"><br>
+        Blood pressure: <input type="text" name="vitals.bloodPressure"><br>
+        O2 Stat: <input type="number" name="vitals.oxygen"><br><br>
+    <input type="submit" value="Add Patient Chart">
+</form>
+
+<%-include('../partials/footer.ejs')%>
