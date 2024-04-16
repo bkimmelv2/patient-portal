@@ -1,0 +1,33 @@
+<%-include('../partials/head.ejs')%>
+
+<div class="patient-details">
+<h1><%= patient.name %></h1>
+    <ul>
+        <li>
+            Age: <%= patient.age %> year(s) old
+        </li>
+        <li>
+            Gender: <%= patient.gender %>
+        </li>
+        <li>
+            Insurance Status: <% if (patient.insurance) { %>
+                Valid
+            <% } else { %>
+                Invalid / Self-Pay
+            <% } %>
+        </li>
+        <li>
+            Vital Signs:
+            <ul>
+                <li>Temperature: <%= patient.vitals.temp %> F</li>
+                <li>Heart Rate: <%= patient.vitals.heartRate %> beats per minute</li>
+                <li>Respiratory Rate: <%= patient.vitals.respRate %> breaths per minute</li>
+                <li>Blood Pressure: <%= patient.vitals.bloodPressure %></li>
+                <li>O2 Stat: <%= patient.vitals.oxygen %>%</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+
+<%-include('../partials/footer.ejs')%>

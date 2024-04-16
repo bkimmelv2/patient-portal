@@ -22,4 +22,15 @@ router.get('/seed', async (req, res) => {
     }
 })
 
+// NEW //
+
+
+// SHOW //
+router.get('/:id', async (req, res) => {
+    const foundPatient = await Patient.findById(req.params.id)
+    res.render('show.ejs', {
+        patient: foundPatient
+    })
+})
+
 module.exports = router
