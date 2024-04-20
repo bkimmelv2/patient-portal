@@ -7,7 +7,11 @@
             <h4>Age:</h4> <%= patient.age %> year(s) old
         </li>
         <li>
-            <h4>Gender:</h4> <%= patient.gender %>
+            <h4>Gender:</h4> <% if (patient.gender === "") { %>
+                N/A
+            <% } else { %>
+                <%= patient.gender %>
+            <% } %>
         </li>
         <li>
             <h4>Insurance Status:</h4> <% if (patient.insurance) { %>
@@ -18,13 +22,11 @@
         </li><br>
         <li>
             <h4>Vital Signs:</h4>
-            <ul>
-                <li>Temperature: <%= patient.vitals.temp %> F</li>
-                <li>Heart Rate: <%= patient.vitals.heartRate %> beats per minute</li>
-                <li>Respiratory Rate: <%= patient.vitals.respRate %> breaths per minute</li>
-                <li>Blood Pressure: <%= patient.vitals.bloodPressure %></li>
-                <li>O2 Stat: <%= patient.vitals.oxygen %>%</li>
-            </ul>
+            <li>Temperature: <%= patient.vitals.temp %> F</li>
+            <li>Heart Rate: <%= patient.vitals.heartRate %> beats per minute</li>
+            <li>Respiratory Rate: <%= patient.vitals.respRate %> breaths per minute</li>
+            <li>Blood Pressure: <%= patient.vitals.bloodPressure %></li>
+            <li>O2 Stat: <%= patient.vitals.oxygen %>%</li>
         </li>
     </ul>
 </div>

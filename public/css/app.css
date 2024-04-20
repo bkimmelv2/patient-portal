@@ -19,11 +19,10 @@ ul {
 
 a {
     text-decoration: none;
-    color: pink;
 }
 
 .patient-list {
-    border: 2px solid black;
+    border: 2px solid pink;
     border-radius: 10px;
     padding: 10px;
     margin-top: 10px;
@@ -31,6 +30,8 @@ a {
     width: 50%;
     margin-left: auto;
     margin-right: auto;
+    color: pink;
+    background-color: rgba(0, 0, 0, 0.4)
 }
 
 .patient-details {
@@ -53,14 +54,28 @@ input {
     padding: 20px;
 }
 
-button, input[type="submit"] {
+button {
     padding: 10px;
-    color: white;
-    background-color: blue;
+    color: black;
+    background-color: pink;
+    cursor: pointer;
+    border-radius: 10px;
 }
 
 #delete-btn {
+    padding: 10px;
+    color: white;
     background-color: red;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#submit-btn {
+    padding: 10px;
+    color: black;
+    background-color: #46B68E;
+    cursor: pointer;
+    border-radius: 10px;
 }
 
 h4 {
@@ -71,7 +86,6 @@ li {
     font-size: 17px;
 }
 
-.header-nav {
-    display: flex;
-    justify-content: space-evenly;
+.head-a {
+    padding: 50px;
 }
