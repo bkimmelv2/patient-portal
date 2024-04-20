@@ -4,20 +4,20 @@
 <h1><%= patient.name %></h1>
     <ul>
         <li>
-            Age: <%= patient.age %> year(s) old
+            <h4>Age:</h4> <%= patient.age %> year(s) old
         </li>
         <li>
-            Gender: <%= patient.gender %>
+            <h4>Gender:</h4> <%= patient.gender %>
         </li>
         <li>
-            Insurance Status: <% if (patient.insurance) { %>
+            <h4>Insurance Status:</h4> <% if (patient.insurance) { %>
                 Valid
             <% } else { %>
                 Invalid / Self-Pay
             <% } %>
-        </li>
+        </li><br>
         <li>
-            Vital Signs:
+            <h4>Vital Signs:</h4>
             <ul>
                 <li>Temperature: <%= patient.vitals.temp %> F</li>
                 <li>Heart Rate: <%= patient.vitals.heartRate %> beats per minute</li>
@@ -28,6 +28,14 @@
         </li>
     </ul>
 </div>
+<nav class="show-nav">
+    <a href="/patients/<%=patient.id%>/edit">
+        <button>Edit Patient Details</button>
+    </a><br><br>
+    <form action="/patients/<%=patient.id%>?_method=DELETE" method="POST">
+        <input type="submit" value="Delete Patient" id="delete-btn">
+    </form>
+</nav>
 
 
 <%-include('../partials/footer.ejs')%>

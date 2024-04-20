@@ -1,3 +1,7 @@
+* {
+    font-family: "Josefin Sans", sans-serif;
+}
+
 body {
     background-color: gray;
     text-align: center;
@@ -20,6 +24,7 @@ a {
 
 .patient-list {
     border: 2px solid black;
+    border-radius: 10px;
     padding: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -30,12 +35,43 @@ a {
 
 .patient-details {
     text-align: left;
+    margin-left: 50px;
 }
 
 .patient-form {
     text-align: left;
+    margin-left: 75px;
 }
 
-.indent {
-    text-indent: 40px;
+input {
+    margin-bottom: 10px;
+}
+
+.show-nav {
+    text-align: left;
+    margin-left: 75px;
+    padding: 20px;
+}
+
+button, input[type="submit"] {
+    padding: 10px;
+    color: white;
+    background-color: blue;
+}
+
+#delete-btn {
+    background-color: red;
+}
+
+h4 {
+    font-size: 19px;
+}
+
+li {
+    font-size: 17px;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-evenly;
 }
