@@ -25,6 +25,7 @@ This app uses all 7 RESTful routes and full CRUD functionality to organize and m
 
 ## Future Goals
 
+- I would like to add the ability to create an account and login.
 - I would like to add the ability to sort the index page by alphabetical order.
 - I would like the vitals signs to turn into a red color whenever the input falls outside the normal range.
 - I would like to add a chart view that gives a wider range of patient details including their reason for visit and a section to keep notes.
